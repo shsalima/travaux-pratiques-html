@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription à une formation</title>
+</head>
+<body>
+
+<h1>Formulaire d'inscription à une formation</h1>
+
+<form>
+    <fieldset>
+        <legend>Informations personnelles</legend>
+
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" placeholder="Votre nom" required>
+        <br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" placeholder="Votre prénom" required>
+        <br><br>
+
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" required>
+        <br><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" required>
+        <br><br>
+
+        <label for="date">Date de naissance :</label>
+        <input type="date" id="date">
+        <br><br>
+
+        <label for="tel">Téléphone :</label>
+        <input type="tel" id="tel" placeholder="0600000000">
+        <br><br>
+
+        <label for="age">Age :</label>
+        <input type="number" id="age" min="18" max="60">
+        <br><br>
+
+        Sexe :
+        <input type="radio" id="homme" name="sexe" value="Homme">
+        <label for="homme">Homme</label>
+
+        <input type="radio" id="femme" name="sexe" value="Femme">
+        <label for="femme">Femme</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Formation</legend>
+
+        <label for="niveau">Niveau d'étude :</label>
+        <select id="niveau">
+            <option>Choisir</option>
+            <option>1re année</option>
+            <option>2e année</option>
+            <option>3e année</option>
+        </select>
+        <br><br>
+
+        <label for="filiere">Filière :</label>
+        <select id="filiere" required>
+            <option value="">Choisir une filière</option>
+            <option>Génie informatique</option>
+            <option>Réseaux et télécommunication</option>
+            <option>IA</option>
+            <option>Cyber Security</option>
+        </select>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Compétences</legend>
+
+        Technologies maîtrisées :
+        <br>
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js">
+        <label for="js">JS</label>
+
+        <input type="checkbox" id="python">
+        <label for="python">Python</label>
+
+        <br><br>
+
+        Domaines d'intérêt :
+        <br>
+        <input type="checkbox" id="web">
+        <label for="web">Développement Web</label>
+
+        <input type="checkbox" id="reseaux">
+        <label for="reseaux">Réseaux</label>
+
+        <input type="checkbox" id="cyber">
+        <label for="cyber">Cyber Security</label>
+
+        <input type="checkbox" id="ia">
+        <label for="ia">AI</label>
+
+        <br><br>
+
+        <label for="motivation">Motivation :</label>
+        <br>
+        <textarea id="motivation" rows="4" cols="30"></textarea>
+
+        <br><br>
+
+        <label for="cv">Télécharger votre CV :</label>
+        <input type="file" id="cv">
+        <br><br>
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Réinitialiser">
+    </fieldset>
+</form>
+
+</body>
+</html>
