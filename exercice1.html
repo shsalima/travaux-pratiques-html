@@ -2,125 +2,112 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription à une formation</title>
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
-<h1>Formulaire d'inscription à une formation</h1>
+<h1 class="titre-formulaire">
+    Formulaire d'inscription à une formation
+</h1>
 
 <form>
-    <div>
-        <h3>Informations personnelles</h3>
+    <div class="groupes">
 
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" placeholder="Votre nom" required>
-        <br><br>
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" placeholder="Votre prénom" required>
-        <br><br>
+        <div>
+            <h3>Informations personnelles</h3>
 
-        <label for="email">Adresse e-mail :</label>
-        <input type="email" id="email" required>
-        <br><br>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" placeholder="Votre nom" required>
 
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" required>
-        <br><br>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" placeholder="Votre prénom" required>
 
-        <label for="date">Date de naissance :</label>
-        <input type="date" id="date">
-        <br><br>
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" required>
 
-        <label for="tel">Téléphone :</label>
-        <input type="tel" id="tel" placeholder="0600000000">
-        <br><br>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" required>
 
-        <label for="age">Age :</label>
-        <input type="number" id="age" min="18" max="60">
-        <br><br>
+            <label for="date">Date de naissance :</label>
+            <input type="date" id="date">
 
-        Sexe :
-        <input type="radio" id="homme" name="sexe" value="Homme">
-        <label for="homme">Homme</label>
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" placeholder="0600000000">
 
-        <input type="radio" id="femme" name="sexe" value="Femme">
-        <label for="femme">Femme</label>
+            <label for="age">Âge :</label>
+            <input type="number" id="age" min="18" max="60">
+
+            <p class="sous-titre">Sexe :</p>
+
+            <div class="choix">
+                <label>
+                    <input type="radio" name="sexe" value="Homme">
+                    Homme
+                </label>
+
+                <label>
+                    <input type="radio" name="sexe" value="Femme">
+                    Femme
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <h3>Formation</h3>
+
+            <label for="niveau">Niveau d'étude :</label>
+            <select id="niveau">
+                <option value="">Choisir</option>
+                <option>1re année</option>
+                <option>2e année</option>
+                <option>3e année</option>
+            </select>
+
+            <label for="filiere">Filière :</label>
+            <select id="filiere" required>
+                <option value="">Choisir une filière</option>
+                <option>Génie informatique</option>
+                <option>Réseaux et télécommunication</option>
+                <option>IA</option>
+                <option>Cyber Security</option>
+            </select>
+        </div>
+
+        <div>
+            <h3>Compétences</h3>
+
+            <p class="sous-titre">Technologies maîtrisées :</p>
+
+            <div class="choix-colonne">
+                <label><input type="checkbox" id="html"> HTML</label>
+                <label><input type="checkbox" id="css"> CSS</label>
+                <label><input type="checkbox" id="js"> JavaScript</label>
+                <label><input type="checkbox" id="python"> Python</label>
+            </div>
+
+            <p class="sous-titre">Domaines d'intérêt :</p>
+
+            <div class="choix-colonne">
+                <label><input type="checkbox" id="web"> Développement Web</label>
+                <label><input type="checkbox" id="reseaux"> Réseaux</label>
+                <label><input type="checkbox" id="cyber"> Cybersécurité</label>
+                <label><input type="checkbox" id="ia"> Intelligence artificielle</label>
+            </div>
+
+            <label for="motivation">Motivation :</label>
+            <textarea id="motivation" rows="4"></textarea>
+
+            <label for="cv">Télécharger votre CV :</label>
+            <input type="file" id="cv">
+        </div>
+
     </div>
 
-    <br>
-
-    <div>
-        <legend>Formation</legend>
-
-        <label for="niveau">Niveau d'étude :</label>
-        <select id="niveau">
-            <option>Choisir</option>
-            <option>1re année</option>
-            <option>2e année</option>
-            <option>3e année</option>
-        </select>
-        <br><br>
-
-        <label for="filiere">Filière :</label>
-        <select id="filiere" required>
-            <option value="">Choisir une filière</option>
-            <option>Génie informatique</option>
-            <option>Réseaux et télécommunication</option>
-            <option>IA</option>
-            <option>Cyber Security</option>
-        </select>
-    </div>
-
-    <br>
-
-    <div>
-        <legend>Compétences</legend>
-
-        Technologies maîtrisées :
-        <br>
-        <input type="checkbox" id="html">
-        <label for="html">HTML</label>
-
-        <input type="checkbox" id="css">
-        <label for="css">CSS</label>
-
-        <input type="checkbox" id="js">
-        <label for="js">JS</label>
-
-        <input type="checkbox" id="python">
-        <label for="python">Python</label>
-
-        <br><br>
-
-        Domaines d'intérêt :
-        <br>
-        <input type="checkbox" id="web">
-        <label for="web">Développement Web</label>
-
-        <input type="checkbox" id="reseaux">
-        <label for="reseaux">Réseaux</label>
-
-        <input type="checkbox" id="cyber">
-        <label for="cyber">Cyber Security</label>
-
-        <input type="checkbox" id="ia">
-        <label for="ia">AI</label>
-
-        <br><br>
-
-        <label for="motivation">Motivation :</label>
-        <br>
-        <textarea id="motivation" rows="4" cols="30"></textarea>
-
-        <br><br>
-
-        <label for="cv">Télécharger votre CV :</label>
-        <input type="file" id="cv">
-        <br><br>
-
-        <input type="submit" value="Envoyer">
+    <div class="boutons">
+        <input type="submit" value="S'inscrire">
         <input type="reset" value="Réinitialiser">
     </div>
 </form>
